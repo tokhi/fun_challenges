@@ -1,3 +1,4 @@
+# This function will sort the numbers based on their weight. e;g 91 = 9+1 = 10
 def order_weight(str)
   num_arr = str.split(' ')
   output = {}
