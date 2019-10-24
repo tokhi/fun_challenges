@@ -1,3 +1,4 @@
+# multipies of x and y under the given number
 def multiplies_of(number, x, y)
   sum = 0
   for x in 1..number-1
