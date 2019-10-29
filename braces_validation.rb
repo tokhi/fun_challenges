@@ -9,7 +9,6 @@ def validBrackets?(str)
 
     when '}'
       x = stack.pop
-      puts stack
       return false if x != '{'
     when ']'
       x = stack.pop
@@ -27,14 +26,12 @@ puts validBrackets?("([{}])")
 
 # function validate braces without using switch
 def valid_braces(braces)
-  open_braces = ['{', '(', '[']
-  close_braces = ['}', ')', ']']
   braces_hash = {'{' => '}', '[' => ']', '(' => ')'}
   br_arr = []
   braces.split('').each do |c|
-    if open_braces.include? c
+    if braces_hash.keys.include? c
       br_arr << c
-    else close_braces.include? c
+    else braces_hash.values.include? c
       element = br_arr.pop
       return false if element != braces_hash.key(c)
     end
